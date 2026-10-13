@@ -1,8 +1,44 @@
+
+/*
+project:
+programmer:
+LMD:
+*/
+/*
+=======================================================
+copied code
+nav {
+    background: #333;
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+    }
+}
+
+
+
+
+=======================================================
+*/
+
 :root {
     --primary: #f5f7fa;
     --secondary: #24445c;
     --accent: #f28c28;
-
 }
 
 body {
