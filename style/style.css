@@ -1,38 +1,7 @@
-
 /*
 project:
 programmer:
 LMD:
-*/
-/*
-=======================================================
-copied code
-nav {
-    background: #333;
-
-    ul {
-        list-style: none;
-    }
-
-    li {
-        display: inline-block;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-
-    }
-}
-
-
-
-
-=======================================================
 */
 
 :root {
@@ -80,11 +49,53 @@ section {
 }
 
 .cta {
- 
-background-color: var(--accent);
-color:#f5f7fa;
-padding: 10px;
- 
+    background-color: var(--accent);
+    color: #f5f7fa;
+    padding: 10px;
+}
+
+/* Skills Table */
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+/* Table Header */
+th {
+    background-color: #24445c;
+    color: white;
+    padding: 15px;
+}
+
+/* Center everything inside the table cell */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Make the wrapper shrink-to-fit, center it via the cell, and left-align its contents */
+.table_wrapper {
+    display: inline-block;
+    text-align: left;
+    width: 110px;
+}
+
+/* Alternate Row Colours */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: #e3edf5;
+}
+
+/* Skill Images */
+td img {
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 footer {
@@ -92,4 +103,28 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
+    margin-top: 40px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #desktopmenu {
+        display: none;
+    }
+    /* Ensure mobile menu can show */
+    #mobilemenu {
+        display: block; 
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #mobilemenu {
+        display: none;
+    }
+    /* Ensure desktop menu shows */
+    #desktopmenu {
+        display: flex;
+        justify-content: center;
+    }
 }
