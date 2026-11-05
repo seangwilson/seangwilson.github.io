@@ -61,6 +61,18 @@ table {
     border-collapse: collapse;
 }
 
+/* Make the first column take up 50% of the table width */
+table th:first-child,
+table td:first-child {
+    width: 50%;
+}
+
+/* Make the second column take up the remaining 50% */
+table th:nth-child(2),
+table td:nth-child(2) {
+    width: 50%;
+}
+
 /* Table Header */
 th {
     background-color: #24445c;
