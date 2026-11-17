@@ -1,13 +1,14 @@
 /*
-project:
-programmer:
-LMD:
+project: Portfolio Website
+programmer: Sean Wilson
+LMD: 05/11/26
 */
 
 :root {
-    --primary: #f5f7fa;
-    --secondary: #24445c;
-    --accent: #f28c28;
+    --primary: #F7F7F8;
+    --secondary: #1C1C1E;
+    --accent: #C41E3A;
+    --section-bg: #ECECEE;
 }
 
 body {
@@ -42,8 +43,116 @@ main {
     padding: 20px;
 }
 
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    background-color: var(--secondary);
+    background-image: 
+        linear-gradient(90deg, rgba(28, 28, 30, 0.95) 0%, rgba(28, 28, 30, 0.7) 60%, rgba(28, 28, 30, 0.3) 100%), 
+        url('../images/hero_background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 40px;
+}
+
+.hero-text {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    color: #CCCCCC;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Hero Section Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #a81830; /* Darker Death Knight red */
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.secondary-btn:hover {
+    background-color: #FFFFFF;
+    color: var(--secondary);
+}
+
+/* Mobile responsiveness: stacks text and portrait vertically on smaller screens */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        margin-bottom: 20px;
+        flex: unset;
+    }
+    
+    .hero-portrait {
+        max-width: 220px; /* Scales down gracefully on mobile */
+    }
+}
+
 section {
-    background-color: #e8f1f2;
+    background-color: var(--section-bg);
     margin-bottom: 20px;
     padding: 20px;
 }
@@ -59,6 +168,7 @@ table {
     width: 80%;
     margin: auto;
     border-collapse: collapse;
+    border: 2px solid var(--secondary);
 }
 
 /* Make the first column take up 50% of the table width */
@@ -75,7 +185,7 @@ table td:nth-child(2) {
 
 /* Table Header */
 th {
-    background-color: #24445c;
+    background-color: var(--secondary);
     color: white;
     padding: 15px;
 }
@@ -96,12 +206,12 @@ td {
 
 /* Alternate Row Colours */
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--primary);
 }
 
 /* Hover Effect */
 tr:hover {
-    background-color: #e3edf5;
+    background-color: #F8E6E9;
 }
 
 /* Skill Images */
